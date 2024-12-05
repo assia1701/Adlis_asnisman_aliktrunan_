@@ -1,0 +1,731 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book Page Flip with Central Audio Icon</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .magazine {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .magazine div {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      display: inline-block;
+      position: relative;
+    }
+
+    .audio-icon {
+      position: absolute;
+      left: 80%;
+      top: 3.5%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      cursor: pointer;
+      font-size: 30px;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;
+    }
+
+
+
+    /* .audio-icon:hover {
+        background: rgba(0, 0, 0, 0.7);
+      } */
+  </style>
+</head>
+<div>
+  <div class="magazine">
+    <div class="page" style="background: url(images/assia_page-0001.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0002.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0003.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0004.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0005.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0006.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0007.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0008.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0009.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0010.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0011.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0012.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0013.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0014.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0015.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0016.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0017.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0018.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0019.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0020.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0021.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0022.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0023.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0024.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0025.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0026.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0027.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0028.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0029.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0030.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0031.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0032.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0033.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0034.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0035.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0036.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0037.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0038.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0039.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0040.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0041.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0042.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0043.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0044.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0045.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0046.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0047.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0048.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0049.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0050.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(50)">🔊</i>
+      <audio id="audio-50" src="audio/page50-audio-tasmidegt-n-yiɣẓer-n-at-ɛebdi.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0051.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(511)" style=" position: absolute;
+      left: 3.5%;
+      top: 15%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      cursor:pointer;
+      font-size: 30px;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;">🔊</i>
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(512)" style=" position: absolute;
+      left: 3.5%;
+      top: 30%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      cursor:pointer;
+      font-size: 30px;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;">🔊</i>
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(513)" style=" position: absolute;
+      left: 3.5%;
+      top: 87%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      cursor:pointer;
+      font-size: 30px;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;">🔊</i>
+
+      <audio id="audio-511" src="audio/page51-audio-aɣil-n-taqqa.mp3" preload="none"></audio>
+      <audio id="audio-512" src="audio/page51-audio-Axrib.mp3" preload="none"></audio>
+      <audio id="audio-513" src="audio/page51-52audio-Awɛessas.mp3" preload="none"></audio>
+
+
+    </div>
+
+    <div class="page" style="background: url(images/assia_page-0052.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(521)" style=" position: absolute;
+      left: 3.5%;
+      top: 45%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      cursor:pointer;
+      font-size: 30px;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;">🔊</i>
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(522)" style=" position: absolute;
+      left: 3.5%;
+      top: 75%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      cursor:pointer;
+      font-size: 30px;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;">🔊</i>
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(523)" style=" position: absolute;
+       left: 3.5%;
+       top: 87%;
+       transform: translate(-50%, -50%);
+       z-index: 10;
+       cursor:pointer;
+       font-size: 30px;
+       color: white;
+       border-radius: 50%;
+       padding: 15px;">🔊</i>
+      <audio id="audio-521" src="audio/page52-audio-Abeɛli.mp3" preload="none"></audio>
+      <audio id="audio-522" src="audio/page52-audio-Buɣrara.mp3" preload="none"></audio>
+      <audio id="audio-523" src="audio/page52-53audio-Cir.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0053.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(53)" style=" position: absolute;
+      left: 3.5%;
+      top: 35%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      cursor:pointer;
+      font-size: 30px;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;">🔊</i>
+      <audio id="audio-53" src="audio/page53-54-audio-Gerzet.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0054.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(541)" style=" position: absolute;
+      left: 3.5%;
+      top: 20%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      cursor:pointer;
+      font-size: 30px;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;">🔊</i>
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(542)" style=" position: absolute;
+       left: 3.5%;
+       top: 60%;
+       transform: translate(-50%, -50%);
+       z-index: 10;
+       cursor:pointer;
+       font-size: 30px;
+       color: white;
+       border-radius: 50%;
+       padding: 15px;">🔊</i>
+      <audio id="audio-541" src="audio/Page54-audio-Ijj-qaḍi.mp3" preload="none"></audio>
+      <audio id="audio-542" src="audio/page54-audio-Meddur.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0055.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(551)" style=" position: absolute;
+      left: 3.5%;
+      top: 12%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      cursor:pointer;
+      font-size: 30px;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;">🔊</i>
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(552)" style=" position: absolute;
+       left: 3.5%;
+       top: 48%;
+       transform: translate(-50%, -50%);
+       z-index: 10;
+       cursor:pointer;
+       font-size: 30px;
+       color: white;
+       border-radius: 50%;
+       padding: 15px;">🔊</i>
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(553)" style=" position: absolute;
+       left: 3.5%;
+       top: 69%;
+       transform: translate(-50%, -50%);
+       z-index: 10;
+       cursor:pointer;
+       font-size: 30px;
+       color: white;
+       border-radius: 50%;
+       padding: 15px;">🔊</i>
+      <audio id="audio-551" src="audio/page55-audio-Mazzer.mp3" preload="none"></audio>
+      <audio id="audio-552" src="audio/page55-audio-Inurar.mp3" preload="none"></audio>
+      <audio id="audio-553" src="audio/page55-56-audio-At-ɛezzuz.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0056.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(56)" style=" position: absolute;
+      left: 3.5%;
+      top: 45%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      cursor:pointer;
+      font-size: 30px;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;">🔊</i>
+      <audio id="audio-56" src="audio/page56-57-audio-Sennan.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0057.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(571)" style=" position: absolute;
+      left: 3.5%;
+      top: 20%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      cursor:pointer;
+      font-size: 30px;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;">🔊</i>
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(572)" style=" position: absolute;
+         left: 3.5%;
+         top: 35%;
+         transform: translate(-50%, -50%);
+         z-index: 10;
+         cursor:pointer;
+         font-size: 30px;
+         color: white;
+         border-radius: 50%;
+         padding: 15px;">🔊</i>
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(573)" style=" position: absolute;
+            left: 3.5%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            cursor:pointer;
+            font-size: 30px;
+            color: white;
+            border-radius: 50%;
+            padding: 15px;">🔊</i>
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(574)" style=" position: absolute;
+               left: 3.5%;
+               top: 70%;
+               transform: translate(-50%, -50%);
+               z-index: 10;
+               cursor:pointer;
+               font-size: 30px;
+               color: white;
+               border-radius: 50%;
+               padding: 15px;">🔊</i>
+      <audio id="audio-571" src="audio/Page57-audio-Tawezyant.mp3" preload="none"></audio>
+      <audio id="audio-572" src="audio/page57-audio-Tafrunt.mp3" preload="none"></audio>
+      <audio id="audio-573" src="audio/page57-audio-Tazemmurt.mp3" preload="none"></audio>
+      <audio id="audio-574" src="audio/page57-58-audio-tizi-n-tsirt.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0058.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(581)" style=" position: absolute;
+      left: 3.5%;
+      top: 32%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      cursor:pointer;
+      font-size: 30px;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;">🔊</i>
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(582)" style=" position: absolute;
+        left: 3.5%;
+        top: 65%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        cursor:pointer;
+        font-size: 30px;
+        color: white;
+        border-radius: 50%;
+        padding: 15px;">🔊</i>
+      <audio id="audio-581" src="audio/page58-audio-Tizi-n-lɛabed.mp3" preload="none"></audio>
+      <audio id="audio-582" src="audio/page58-59-audio-Tlat.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0059.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(59)" style=" position: absolute;
+      left: 3.5%;
+      top: 20%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      cursor:pointer;
+      font-size: 30px;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;">🔊</i>
+      <audio id="audio-59" src="audio/page59-audio-Tizeggaɣin.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0060.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(60)" style=" position: absolute;
+      left: 3.5%;
+      top: 45%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      cursor:pointer;
+      font-size: 30px;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;">🔊</i>
+
+      <audio id="audio-60" src="audio/page-60-audio-tasmadrart-n-yiɣẓer-n-at-ɛebdi.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0061.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(611)" style=" position: absolute;
+      left: 3.5%;
+      top: 20%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      cursor:pointer;
+      font-size: 30px;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;">🔊</i>
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(612)" style=" position: absolute;
+          left: 3.5%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 10;
+          cursor:pointer;
+          font-size: 30px;
+          color: white;
+          border-radius: 50%;
+          padding: 15px;">🔊</i>
+      <audio id="audio-611" src="audio/page61-audio-Ixef-n-tɣerrist.mp3" preload="none"></audio>
+      <audio id="audio-612" src="audio/page61-audio-bu-tleɣmin.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0062.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(621)" style=" position: absolute;
+      left: 3.5%;
+      top: 15%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      cursor:pointer;
+      font-size: 30px;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;">🔊</i>
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(622)" style=" position: absolute;
+          left: 3.5%;
+          top: 35%;
+          transform: translate(-50%, -50%);
+          z-index: 10;
+          cursor:pointer;
+          font-size: 30px;
+          color: white;
+          border-radius: 50%;
+          padding: 15px;">🔊</i>
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(623)" style=" position: absolute;
+          left: 3.5%;
+          top: 67%;
+          transform: translate(-50%, -50%);
+          z-index: 10;
+          cursor:pointer;
+          font-size: 30px;
+          color: white;
+          border-radius: 50%;
+          padding: 15px;">🔊</i>
+      <audio id="audio-621" src="audio/page62-audio-tagecrirt.mp3" preload="none"></audio>
+      <audio id="audio-622" src="audio/page62-audio-Malu.mp3" preload="none"></audio>
+      <audio id="audio-623" src="audio/page62-63-audio-Ixef-uɛessas.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0063.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(631)" style=" position: absolute;
+      left: 3.5%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      cursor:pointer;
+      font-size: 30px;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;">🔊</i>
+      <audio id="audio-631" src="audio/page63-audio-lmeḥmel.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0064.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(641)" style=" position: absolute;
+      left: 3.5%;
+      top: 12%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      cursor:pointer;
+      font-size: 30px;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;">🔊</i>
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(642)" style=" position: absolute;
+      left: 3.5%;
+      top: 32%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      cursor:pointer;
+      font-size: 30px;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;">🔊</i>
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(643)" style=" position: absolute;
+      left: 3.5%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      cursor:pointer;
+      font-size: 30px;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;">🔊</i>
+      <audio id="audio-641" src="audio/page64-audio-taqliɛt-n-jaref.mp3" preload="none"></audio>
+      <audio id="audio-642" src="audio/page64-audio-iccn-rruman.mp3" preload="none"></audio>
+      <audio id="audio-643" src="audio/page64-audio-icc-ajdid.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0065.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(65)" style=" position: absolute;
+      left: 3.5%;
+      top: 12%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      cursor:pointer;
+      font-size: 30px;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;">🔊</i>
+      <audio id="audio-65" src="audio/page65-audio-ixef-uceqquf.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0066.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(66)" style=" position: absolute;
+      left: 3.5%;
+      top: 45%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      cursor:pointer;
+      font-size: 30px;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;">🔊</i>
+      <audio id="audio-66" src="audio/page66-audio-tasmamant-n-yiɣẓer-n-at-ɛebdi.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0067.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(671)" style=" position: absolute;
+      left: 3.5%;
+      top: 18%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      cursor:pointer;
+      font-size: 30px;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;">🔊</i>
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(672)" style=" position: absolute;
+      left: 3.5%;
+      top: 33%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      cursor:pointer;
+      font-size: 30px;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;">🔊</i>
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(673)" style=" position: absolute;
+      left: 3.5%;
+      top: 45%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      cursor:pointer;
+      font-size: 30px;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;">🔊</i>
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(674)" style=" position: absolute;
+      left: 3.5%;
+      top: 57%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      cursor:pointer;
+      font-size: 30px;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;">🔊</i>
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(675)" style=" position: absolute;
+      left: 3.5%;
+      top: 70%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      cursor:pointer;
+      font-size: 30px;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;">🔊</i>
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(676)" style=" position: absolute;
+      left: 3.5%;
+      top: 85%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      cursor:pointer;
+      font-size: 30px;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;">🔊</i>
+      <audio id="audio-671" src="audio/page67audio-taɛwint-n-girux.mp3" preload="none"></audio>
+      <audio id="audio-672" src="audio/page67-audio-taɛwint-n-ubukḥil.mp3" preload="none"></audio>
+      <audio id="audio-673" src="audio/page67-audio-taɛwint-n-ubercic.mp3" preload="none"></audio>
+      <audio id="audio-674" src="audio/page67-audio-taɛwint-n-uljazya.mp3" preload="none"></audio>
+      <audio id="audio-675" src="audio/page67-audio-taɛwint-n-uciḥan.mp3" preload="none"></audio>
+      <audio id="audio-676" src="audio/page67-audio-taɛwint-n-ulḥusin.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0068.jpg); background-size: 100% 100%;">
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(681)" style=" position: absolute;
+      left: 3.5%;
+      top: 15%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      cursor:pointer;
+      font-size: 30px;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;">🔊</i>
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(682)" style=" position: absolute;
+      left: 3.5%;
+      top: 30%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      cursor:pointer;
+      font-size: 30px;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;">🔊</i>
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(683)" style=" position: absolute;
+      left: 3.5%;
+      top: 45%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      cursor:pointer;
+      font-size: 30px;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;">🔊</i>
+      <i class="audio-icon" id="audio-icon" onclick="toggleAudio(684)" style=" position: absolute;
+      left: 3.5%;
+      top: 60%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      cursor:pointer;
+      font-size: 30px;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;">🔊</i>
+      <audio id="audio-681" src="audio/page68-audio-taɛwint-n-Ɛli-usalem.mp3" preload="none"></audio>
+      <audio id="audio-682" src="audio/page68-audio-taɛwint-n-at-jurra.mp3" preload="none"></audio>
+      <audio id="audio-683" src="audio/page68-audio-taɛwint-n-tekkar.mp3" preload="none"></audio>
+      <audio id="audio-684" src="audio/page68-audio-taɛwintn-ulḥeccani.mp3" preload="none"></audio>
+    </div>
+    <div class="page" style="background: url(images/assia_page-0069.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0070.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0071.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0072.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0073.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0074.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0075.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0076.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0077.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0078.jpg); background-size: 100% 100%;">
+    </div>
+    <div class="page" style="background: url(images/assia_page-0079.jpg); background-size: 100% 100%;">
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/turn.js"></script>
+  <audio id="page-turn-sound" src="audio/page-turn.mp3" preload="none"></audio>
+
+  <script>
+    // Initialize the page flip effect
+    $('.magazine').turn({
+      gradients: true,
+      acceleration: true
+    });
+
+    // Keep track of the currently playing audio
+    let currentAudio = null;
+
+    // Function to play or pause the audio on the page
+    function toggleAudio(pageNumber) {
+      const audio = document.getElementById('audio-' + pageNumber);
+      const icon = document.getElementById('audio-icon');
+
+      // Pause currently playing audio if it's not the current page
+      if (currentAudio && currentAudio !== audio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0; // Reset audio
+      }
+
+      if (audio.paused) {
+        audio.play();
+        // icon.textContent = '⏸️'; // Change icon to "Pause"
+        currentAudio = audio; // Set the current audio
+      } else {
+        audio.pause();
+        icon.textContent = '🔊'; // Change icon back to "Play"
+        currentAudio = null; // Clear the current audio
+      }
+    }
+
+    // Play the page-turn sound every time a page is flipped
+    $('.magazine').on('turn', function (event, page, view) {
+      var audio = document.getElementById('page-turn-sound');
+      audio.play(); // Play the sound
+    });
+  </script>
+
+  </body>
+
+</html>
